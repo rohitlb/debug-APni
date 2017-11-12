@@ -85,39 +85,53 @@ app.get('/homes',function (req,res) {
     if(req.query.page=='home' || req.query.page=='My Profile' || req.query.page=='My Activity' || req.query.page=='Refer Friends' || req.query.page=='Contact Us' ||req.query.page=='Logout' || req.query.page=='Confidential Information' || req.query.page=='Emergency Contact Details' ||req.query.page=='Address' )
         page= req.query.page;
 
-    res.render('homes',
-        {
-            page:page
-        })
+    User.findOne({_id : req.session.userID},function (err,result) {
+        if(err){
+            console.log(err);
+        }
+        else{
+            console.log(result);
+            if(result !== ""){
+                res.render('homes',
+                    {
+                        page:page,
+                        data : result
+                    });
+            }
+            else{
+                res.send({status : "failed", message : "User not found"});
+            }
+        }
+    });
 });
 
 
 
-// app.get('/home',function (req,res) {
-//     if (req.session.userID) {
-//         res.redirect('/profile');
-//         res.end();
-//     }
+app.get('/homess',function (req,res) {
+    if (req.session.userID) {
+        res.render('profile');
+        res.end();
+    }
 //     if (req.session.doctorID) {
 //         res.redirect('/doctorpage');
 //     }
-//     res.send({status: "success", message: "Please Login First"});
-//     res.end();
-// });
+    res.send({status: "success", message: "Please Login First"});
+    res.end();
+});
 
 app.get('/', function (req, res) {
-    // console.log(req.session.userID);
-    // if (req.session.userID) {
-    //     res.redirect('/profile');
-    //     res.end();
-    // }
-    // if(req.session.doctorID){
-    //     res.redirect('/doctorpage');
-    //     res.end();
-    // }
-    // if(!req.session.user && !req.session.doctorID) {
-res.render('homes');
-
+    console.log(req.session.userID);
+    if (req.session.userID) {
+        res.redirect('/profile');
+        res.end();
+    }
+    if(req.session.doctorID){
+        res.redirect('/doctorpage');
+        res.end();
+    }
+    if(!req.session.user && !req.session.doctorID) {
+        res.redirect('/homess');
+    }
 });
 
 
@@ -1901,9 +1915,6 @@ app.post('/searchdisease',function (req,res) {
     });
 });
 
-
-
-
 ////////////////////////////////////////// register as a doctor and user ///////////////////////////////////////////////
 
 app.get('/doctorasuser',function (req,res) {
@@ -1971,7 +1982,6 @@ app.post('/health_care_provider',function(req,res) {
         else {
             if (req.query.page == 'home' || req.query.page == 'profile_doctor' || req.query.page == 'profile' || req.query.page == 'profile_pharmacist' || req.query.page == 'drug_data' || req.query.page == 'molecule_data' || req.query.page == 'disease_data' || req.query.page == 'drug_data_form' || req.query.page == 'molecule_data_form' || req.query.page == 'disease_data_form' || req.query.page == 'feedback_contributions' || req.query.page == 'feedback_profile' || req.query.page == 'notifications' || req.query.page == 'need_help')
                 page = req.query.page;
-            console.log(result)
             res.render('home_profile_doctor',
                 {
                     page: page,
@@ -2126,7 +2136,6 @@ app.get('/userregister',function (req,res) {
     res.render('userregister');
 });
 
-
 app.post('/userregister', function (req, res) {
     bcrypt.genSalt(10, function (err, salt) {
         bcrypt.hash(req.body.password, salt, function (err, hash) {
@@ -2154,7 +2163,6 @@ app.post('/userregister', function (req, res) {
         });
     });
 });
-
 
 ////////////////////////////////////////User Profile Insert ////////////////////////////////////////////////////////////
 

@@ -10,14 +10,14 @@ div#Pcard3
                 div.row
                     .input-field.col.s6
                         i.material-icons.prefix account_circle
-                        input.validate#names(type="text")
+                        input.validate#names(type="text", value=data.relative_name)
                         label(for="names") Name
                         br
                         br
                 div.row
                     .input-field.col.s6
                         i.material-icons.prefix group
-                        input.validate#relation(type="text")
+                        input.validate#relation(type="text" , value=data.relation)
                         label(for="relation") Relation
                         br
                         br
@@ -25,7 +25,7 @@ div#Pcard3
                 div.row
                     .input-field.col.s6
                         i.material-icons.prefix phone
-                        input.validate#Pphone(type="tel")
+                        input.validate#Pphone(type="tel" , value=data.relative_contact)
                         label(for="Pphone") Mobile Number
                         br
                         br

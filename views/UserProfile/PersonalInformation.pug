@@ -10,7 +10,7 @@ div#Pcard3
                 div.row
                     .input-field.input1
                         i.material-icons.prefix cake
-                        input#datepicker.textbox(type="text").datepicker
+                        input#datepicker.textbox(type="text" , value=data.dob).datepicker
                         label(for="datepicker") Date Of Birth
                         br
                         br
@@ -21,11 +21,11 @@ div#Pcard3
                     br
                     br
                     div
-                        input.with-gap(name="gender",type="radio",id="Ptest5")
+                        input.with-gap(name="gender", type="radio", id="Ptest5")
                         label(for="Ptest5") Male
-                        input.with-gap(name="gender",type="radio",id="Ptest6")
+                        input.with-gap(name="gender", type="radio", id="Ptest6")
                         label(for="Ptest6") Female
-                        input.with-gap(name="gender",type="radio",id="Ptest7")
+                        input.with-gap(name="gender", type="radio", id="Ptest7")
                         label(for="Ptest7") Others
                 br
                 br
@@ -33,7 +33,7 @@ div#Pcard3
                     i.material-icons.prefix opacity
                     label.strong Blood Group
                     select.browser-default#Pbox
-                        option.disabled.selected(value=" ")
+                        option.disabled.selected(value"")
                         option(value="A+") A+
                         option(value="A-") A-
                         option(value="B+") B+
@@ -48,22 +48,22 @@ div#Pcard3
                     i.material-icons.prefix favorite
                     label.strong Marital Status
                     br
-                    input.with-gap(name="marital",type="radio",id="Ptest1")
+                    input.with-gap(name="marital", type="radio", id="Ptest1")
                     label(for="Ptest1") Married
-                    input.with-gap(name="marital",type="radio",id="Ptest2")
+                    input.with-gap(name="marital", type="radio", id="Ptest2")
                     label(for="Ptest2") UnMarried
                 div.row
                     br
                     br
                     .input-field.input1
                         i.material-icons.prefix import_export
-                        input.textbox(type="text")#Pheight
+                        input.textbox(type="text", value=data.height)#Pheight
                         label(for="Pheight") Height
                 div.row
                     br
                     .input-field.input1
                         i.material-icons.prefix weight
-                        input.textbox(type="text")#Pweight
+                        input.textbox(type="text", value=data.weight)#Pweight
                         label(for="Pheight") Weight
                         br
                 div.row
