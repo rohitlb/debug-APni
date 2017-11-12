@@ -1,0 +1,44 @@
+ul#dropdown1.dropdown-content
+    li
+        a(href='/homes?page=My Profile') My Profile
+    li
+        a(href='/homes?page=My Activity') My Activity
+    li
+        a(href='/homes?page=Refer Friends') Refer Friends
+    li
+        a(href='/homes?page=Contact Us') Contact Us
+    li
+        a(href='/homes?page=Logout') Logout
+//header
+div
+    div.row#row1
+        include ../login-signup/register
+        i.material-icons.white-text.right notifications
+    div.row#row2
+        div.col.s2.m2.l1
+            img(src="/images/az.png" height="100px" width="200px")
+        div.col.s8.m8.l9
+            div.col.s4.m4.l2
+                h3#logoname ApniCare
+            div.col.s8.m8.l10
+                .input-field#input1
+                    input#search(type='search', required='',placeholder="search here")
+                    label.label-icon(for='search')
+                    .material-icons#searchbutton search
+                //include ../login-signup/register
+        div.col.s2.m2.l2
+            br
+            a.dropdown-button.btn-flat.white-text(data-activates='dropdown1') user
+                i.material-icons.white-text.large person
+
+    div.row#row3
+//body
+include ../UserProfile/MyProfile
+//else if(page == 'My Activity')
+//    include ../UserProfile/MyProfile
+//else if(page == 'Refer Friends')
+//    include ../UserProfile/MyProfile
+//else if(page == 'Contact Us')
+//    include ../UserProfile/MyProfile
+//else if(page == 'Logout')
+//    include ../login-signup/body

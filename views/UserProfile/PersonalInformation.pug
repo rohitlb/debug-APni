@@ -1,0 +1,70 @@
+div#Pcard3
+    div
+        div.row.Pheadings
+            a(href="#")#660099 Personal Information
+            a.btn-flat.small.right.black-text#PInfoedit Edit
+            br
+            br
+        form#PersonalInfo
+            div.row.Pformfordetail
+                div.row
+                    .input-field.input1
+                        i.material-icons.prefix cake
+                        input#datepicker.textbox(type="text").datepicker
+                        label(for="datepicker") Date Of Birth
+                        br
+                        br
+
+                div.row
+                    i.material-icons.prefix wc
+                    label Your Gender
+                    br
+                    br
+                    div
+                        input.with-gap(name="gender",type="radio",id="Ptest5")
+                        label(for="Ptest5") Male
+                        input.with-gap(name="gender",type="radio",id="Ptest6")
+                        label(for="Ptest6") Female
+                        input.with-gap(name="gender",type="radio",id="Ptest7")
+                        label(for="Ptest7") Others
+                br
+                br
+                div.row
+                    i.material-icons.prefix opacity
+                    label.strong Blood Group
+                    select.browser-default#Pbox
+                        option.disabled.selected(value=" ")
+                        option(value="A+") A+
+                        option(value="A-") A-
+                        option(value="B+") B+
+                        option(value="B-") B-
+                        option(value="AB+") AB+
+                        option(value="AB-") AB-
+                        option(value="O+") O+
+                        option(value="O-") O-
+                div.row
+                    br
+                    br
+                    i.material-icons.prefix favorite
+                    label.strong Marital Status
+                    br
+                    input.with-gap(name="marital",type="radio",id="Ptest1")
+                    label(for="Ptest1") Married
+                    input.with-gap(name="marital",type="radio",id="Ptest2")
+                    label(for="Ptest2") UnMarried
+                div.row
+                    br
+                    br
+                    .input-field.input1
+                        i.material-icons.prefix import_export
+                        input.textbox(type="text")#Pheight
+                        label(for="Pheight") Height
+                div.row
+                    br
+                    .input-field.input1
+                        i.material-icons.prefix weight
+                        input.textbox(type="text")#Pweight
+                        label(for="Pheight") Weight
+                        br
+                div.row
+                    a.btn.right#PersonalDetailsSubmit Submit

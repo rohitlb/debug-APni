@@ -1,0 +1,30 @@
+div#Pcard3
+    div
+        div.row.Pheadings1
+            a(href="#") Contact Information
+            a.btn-flat.small.right.black-text#PInfoedit Edit
+            br
+            br
+        form#ContactInfo
+            div.row.Pformfordetail
+                div.row
+                    .input-field.col.s6
+                        i.material-icons.prefix account_circle
+                        input.validate#Pfirstname(type="text")
+                        label(for="Pfirstname") First Name
+                        br
+                        br
+                div.row
+                    .input-field.col.s6
+                        i.material-icons.prefix phone
+                        input.validate#Pphone(type="tel")
+                        label(for="Pphone") Mobile Number
+                        br
+                        br
+                div.row
+                    .input-field.col.s6
+                        i.material-icons.prefix mail
+                        input.validate#Pemail(type="email")
+                        label(for="Pemail",data-error="wrong",data-success="right") Email
+                div.row
+                    a.btn.right#ContactUsSubmit Submit

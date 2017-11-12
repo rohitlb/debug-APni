@@ -1,0 +1,127 @@
+div
+    .container
+        div.row
+            div.col.s12.m5.l4
+                div#Pcard1
+                    div.row
+                        div.col.s5.m6.l6#Pperson
+                            i.material-icons.medium image
+                            //img#apnilogo.circle(src="/images/az.png",height="200%", width="100%")
+                        div.col.s7.m6.l6#Pname
+                            p.P.black-text.strong Hello,
+                            p.P.black-text user
+                    //div.row.valign-wrapper
+                        div.col.s12
+                            form(action='#')
+                                .file-field.input-field
+                                    .btn
+                                        span File
+                                        input(type='file')
+                                    .file-path-wrapper
+                                        input.file-path.validate(type='text')#images
+                                        label(for="images")
+                                        a(href="#")
+                                            span.right.espan#upload upload
+
+                div#Pcard2
+                    div.row
+                        div.col.s12.m12.l12
+                            ul.hoverable
+                                br
+                                br
+                                li
+                                    i.material-icons.prefix account_circle
+                                        a(href="#").Pspan2 My Profile
+                                    br
+                                    br
+                                li
+                                    a(href='/homes?page=My Profile').Pspan1 Personal Information
+                                    br
+                                    br
+                                li
+                                    a(href='/homes?page=Contact Us').Pspan1 Contact Information
+                                    br
+                                    br
+                                li
+                                    a(href='/homes?page=Confidential Information').Pspan1 Confidential Information
+                                    br
+                                    br
+                                li
+                                    a(href='/homes?page=Emergency Contact Details').Pspan1 Emergency Contact Details
+                                    br
+                                    br
+                                li
+                                    a(href='/homes?page=Address').Pspan1 Address
+                                    br
+                                    br
+
+                                li.divider
+                            ul.hoverable
+                                br
+                                br
+                                li
+                                    i.material-icons.prefix local_activity
+                                    a(href='/homes?page=My Activity').Pspan2 My Activity
+                                    br
+                                    br
+                                li
+                                    a(href="#").Pspan1 My Doctor
+                                    br
+                                    br
+                                li
+                                    a(href="#").Pspan1 My Drugs
+                                    br
+                                    br
+                                li
+                                    a(href="#").Pspan1 My Diseases
+                                    br
+                                    br
+                                li.divider
+                            ul.hoverable
+                                br
+                                br
+                                li
+                                    a(href='/homes?page=Refer Friends').Pspan2 Refer Friends
+                                li.divider
+                            ul.hoverable
+                                br
+                                li
+                                    i.material-icons.small.prefix call
+                                    a(href='/homes?page=Contact Us').Pspan2 Contact Us
+                                    br
+
+
+                //i.material-icons person
+            div.col.s12.m7.l8
+                //if(page == 'Personal Information')
+                //    include ../login-signup/PersonalInformation
+                //else if(page == 'Contact Information')
+                //    include ../UserProfile/ContactUs
+                //else if(page == 'Confidential Information')
+                //    include ../UserProfile/ConfidentialInformation
+                //else if(page == 'Emergency Contact Details')
+                //    include ../UserProfile/EmergencyContactDetails
+                //else if(page == 'Address')
+                //    include ../UserProfile/Address
+                //
+
+                    //if(page == 'homes')
+                    //    include ../login-signup/body
+                if(page == 'My Profile')
+                    include ../UserProfile/PersonalInformation
+                else if(page == 'Contact Us')
+                    include ../UserProfile/ContactUs
+                else if(page == 'Confidential Information')
+                    include ../UserProfile/ConfidentialInformation
+                else if(page == 'Emergency Contact Details')
+                    include ../UserProfile/EmergencyContactDetails
+                else if(page == 'Address')
+                    include ../UserProfile/Address
+                else if(page == 'My Activity')
+                    include ../UserProfile/MyActivity
+                else if(page == 'Refer Friends')
+                    include ../UserProfile/ReferFriends
+                else if(page == 'Contact Us')
+                    include ../UserProfile/ContactUs
+                else if(page == 'Logout')
+                    include ../login-signup/body
