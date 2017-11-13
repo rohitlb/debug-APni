@@ -10,21 +10,21 @@ div#Pcard3
                 div.row
                     .input-field.col.s6
                         i.material-icons.prefix account_circle
-                        input.validate#Pfirstname(type="text")
+                        input.validate#Pfirstname(type="text", value=data.name)
                         label(for="Pfirstname") First Name
                         br
                         br
                 div.row
                     .input-field.col.s6
                         i.material-icons.prefix phone
-                        input.validate#Pphone(type="tel")
+                        input.validate#Pphone(type="tel" value=data.number)
                         label(for="Pphone") Mobile Number
                         br
                         br
                 div.row
                     .input-field.col.s6
                         i.material-icons.prefix mail
-                        input.validate#Pemail(type="email")
-                        label(for="Pemail",data-error="wrong",data-success="right") Email
+                        input.validate#Pemail(type="email", value=data.email)
+                        label(for="Pemail", data-error="wrong", data-success="right") Email
                 div.row
                     a.btn.right#ContactUsSubmit Submit
