@@ -81,8 +81,8 @@ app.use(session({
 }));
 //*******************************frontend changes***********************************************
 app.get('/homes',function (req,res) {
-    var page= 'home';
-    if(req.query.page=='home' || req.query.page=='My Profile' || req.query.page=='My Activity' || req.query.page=='Refer Friends' || req.query.page=='Contact Us' ||req.query.page=='Logout' || req.query.page=='Confidential Information' || req.query.page=='Emergency Contact Details' ||req.query.page=='Address' )
+    var page= 'homes';
+    if(req.query.page=='profilePage' || req.query.page=='My Profile' || req.query.page=='My Activity' || req.query.page=='Refer Friends' || req.query.page=='Contact Us' ||req.query.page=='Logout' || req.query.page=='Confidential Information' || req.query.page=='Emergency Contact Details' ||req.query.page=='Address' )
         page= req.query.page;
 
     res.render('homes',
