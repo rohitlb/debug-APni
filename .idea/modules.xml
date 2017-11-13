@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/ApniCare.iml" filepath="$PROJECT_DIR$/.idea/ApniCare.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/debug-APni.iml" filepath="$PROJECT_DIR$/.idea/debug-APni.iml" />
     </modules>
   </component>
 </project>
