@@ -17,7 +17,6 @@ mongoose.Promise = promise;
 var async = require('async');
 var keys = require('./private/keys');
 
-
 // req models
 var User  = require('./model/registration');
 var Doctor = require('./model/doctorregistration');
@@ -111,12 +110,13 @@ app.get('/homess',function (req,res) {
     if (req.session.userID) {
         res.render('profile');
         res.end();
-    }
+    }else {
 //     if (req.session.doctorID) {
 //         res.redirect('/doctorpage');
 //     }
-    res.send({status: "success", message: "Please Login First"});
-    res.end();
+        res.render('home');
+        res.end();
+    }
 });
 
 app.get('/', function (req, res) {
@@ -130,7 +130,7 @@ app.get('/', function (req, res) {
         res.end();
     }
     if(!req.session.user && !req.session.doctorID) {
-        res.redirect('/homess');
+        res.render('home');
     }
 });
 
@@ -307,17 +307,17 @@ app.post('/register', function (req, res) {
 });
 
 //render profile page of user
-// app.get('/profile', function (req, res) {
-//     // if (req.session.userID) {
-//     //     res.render('profile', {number: req.session.userID});
-//     // }
-//     // if(req.session.doctorID) {
-//     //     res.render('doctorpage', {number: req.session.doctorname});
-//     // }
-//     // if(!req.session.userID && !req.session.doctorID) {
-//     //     res.send({status: "failed", message: "Please Login First"});
-//     // }
-// });
+app.get('/profile', function (req, res) {
+    if (req.session.userID) {
+        res.render('profile', {number: req.session.userID});
+    }
+    if(req.session.doctorID) {
+        res.render('doctorpage', {number: req.session.doctorname});
+    }
+    if(!req.session.userID && !req.session.doctorID) {
+        res.send({status: "failed", message: "Please Login First"});
+    }
+});
 
 app.get('/profiles',function (req,res) {
     res.render('profiles');
