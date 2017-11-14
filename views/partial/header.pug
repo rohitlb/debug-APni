@@ -16,7 +16,8 @@ div
         i.material-icons.white-text.right notifications
     div.row#row2
         div.col.s2.m2.l1
-            img(src="/images/az.png" height="100px" width="200px")
+            a(href='/homes?page=profilePage')
+                img(src="/images/az.png" height="100px" width="200px")
         div.col.s8.m8.l9
             div.col.s4.m4.l2
                 h3#logoname ApniCare
@@ -31,14 +32,13 @@ div
             a.dropdown-button.btn-flat.white-text(data-activates='dropdown1') user
                 i.material-icons.white-text.large person
 
-    div.row#row3
+    //div.row#row3
+
 //body
-include ../UserProfile/MyProfile
-//else if(page == 'My Activity')
-//    include ../UserProfile/MyProfile
-//else if(page == 'Refer Friends')
-//    include ../UserProfile/MyProfile
-//else if(page == 'Contact Us')
-//    include ../UserProfile/MyProfile
-//else if(page == 'Logout')
-//    include ../login-signup/body
+
+if(page == 'profilePage')
+    include ../login-signup/body
+else if (page == 'Logout')
+    include ../login-signup/body
+else
+    include ../UserProfile/MyProfile

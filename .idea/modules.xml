@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+<<<<<<< HEAD
+=======
       <module fileurl="file://$PROJECT_DIR$/.idea/ApniCare.iml" filepath="$PROJECT_DIR$/.idea/ApniCare.iml" />
+>>>>>>> ea5fa7cc4ad5a251ee132409ba1f440dc352b067
+      <module fileurl="file://$PROJECT_DIR$/.idea/debug-APni.iml" filepath="$PROJECT_DIR$/.idea/debug-APni.iml" />
     </modules>
   </component>
 </project>

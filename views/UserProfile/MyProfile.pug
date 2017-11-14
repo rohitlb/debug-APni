@@ -9,7 +9,7 @@ div
                             //img#apnilogo.circle(src="/images/az.png",height="200%", width="100%")
                         div.col.s7.m6.l6#Pname
                             p.P.black-text.strong Hello,
-                            p.P.black-text #{data.name}
+                            p.P4.black-text #{data.name}
                     //div.row.valign-wrapper
                         div.col.s12
                             form(action='#')
@@ -93,20 +93,6 @@ div
 
                 //i.material-icons person
             div.col.s12.m7.l8
-                //if(page == 'Personal Information')
-                //    include ../login-signup/PersonalInformation
-                //else if(page == 'Contact Information')
-                //    include ../UserProfile/ContactUs
-                //else if(page == 'Confidential Information')
-                //    include ../UserProfile/ConfidentialInformation
-                //else if(page == 'Emergency Contact Details')
-                //    include ../UserProfile/EmergencyContactDetails
-                //else if(page == 'Address')
-                //    include ../UserProfile/Address
-                //
-
-                    //if(page == 'homes')
-                    //    include ../login-signup/body
                 if(page == 'My Profile')
                     include ../UserProfile/PersonalInformation
                 else if(page == 'Contact Us')
@@ -123,5 +109,3 @@ div
                     include ../UserProfile/ReferFriends
                 else if(page == 'Contact Us')
                     include ../UserProfile/ContactUs
-                else if(page == 'Logout')
-                    include ../login-signup/body
